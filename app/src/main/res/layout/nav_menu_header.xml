@@ -9,20 +9,36 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="120dp"
+
+        <androidx.cardview.widget.CardView
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
-            android:id="@+id/imageViewNavProfile"
-            tools:srcCompat="@tools:sample/avatars"/>
+            android:id="@+id/cardViewNavImageContainer"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="27dp"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/imageViewNavProfile"
+                tools:srcCompat="@tools:sample/avatars"/>
+
+        </androidx.cardview.widget.CardView>
+
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/imageViewNavProfile"
+            app:layout_constraintTop_toBottomOf="@id/cardViewNavImageContainer"
             android:text="nurik.bro.2000@gmail.com"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
