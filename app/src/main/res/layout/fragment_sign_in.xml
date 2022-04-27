@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SignUpIn.SignInFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/signInConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sign_up_in_bg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:imageZoom="1"
+            android:layout_marginTop="-90dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Sign In"
+            android:textColor="#707070"
+            android:textSize="50dp"
+            android:fontFamily="@font/baloo_bhai"
+            android:layout_marginTop="60dp"
+            android:id="@+id/simpleTextSignIn"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="61dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/simpleTextSignIn"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Email"
+            android:lines="1"
+            android:fontFamily="@font/baloo_bhai"
+            android:textSize="25sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="46dp"
+            android:id="@+id/editTextSignInEmail"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="61dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextSignInEmail"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Password"
+            android:lines="1"
+            android:fontFamily="@font/baloo_bhai"
+            android:textSize="25sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="46dp"
+            android:id="@+id/editTextSignInPassword"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot password?"
+            app:layout_constraintTop_toBottomOf="@id/editTextSignInPassword"
+            app:layout_constraintEnd_toEndOf="@id/editTextSignInPassword"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/baloo_bhai"
+            android:id="@+id/tvForgotPassword"/>
+
+
+        <Button
+            android:id="@+id/buttonSignIn"
+            android:layout_width="0dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="87dp"
+            android:layout_marginEnd="46dp"
+            android:background="@drawable/button_bg"
+            android:backgroundTint="@color/button_bg_color"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="Sign In"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextSignInPassword" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Or"
+            app:layout_constraintTop_toBottomOf="@id/buttonSignIn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:textSize="25dp"
+            android:fontFamily="@font/baloo_bhai"/>
+
+        <Button
+            android:id="@+id/buttonSignInWithGoggle"
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="46dp"
+            android:background="@drawable/button_bg"
+            android:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+            android:fontFamily="@font/baloo_bhai"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="  with google"
+            app:icon="@drawable/googleg_standard_color_18"
+            app:iconGravity="start"
+            app:iconPadding="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonSignIn" />
+
+        <TextView
+            android:id="@+id/tvDontHaveAnAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Don't have an account?"
+            android:textSize="30sp"
+            android:fontFamily="@font/baloo_bhai"
+            android:textColor="@color/white"
+            android:layout_marginBottom="25dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

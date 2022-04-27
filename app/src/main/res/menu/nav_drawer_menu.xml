@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item android:title="">
+        <menu>
+            <item android:title="Active Tasks"
+                android:id="@+id/nav_active_tasks"/>
+            <item android:title="Today"
+                android:id="@+id/nav_today"/>
+            <item android:title="Finished"
+                android:id="@+id/nav_finished"/>
+            <item android:title="Deleted"
+                android:id="@+id/nav_deleted"/>
+        </menu>
+    </item>
+    <item android:title="">
+        <menu>
+            <item android:title="My Profile"
+                android:id="@+id/nav_profile"/>
+            <item android:title="Connect devices"
+                android:id="@+id/nav_connect_devices"/>
+        </menu>
+    </item>
+</menu>

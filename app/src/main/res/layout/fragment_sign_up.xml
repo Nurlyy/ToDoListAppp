@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpIn.SignUpFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/signInConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sign_up_in_bg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:imageZoom="1"
+            android:layout_marginTop="-90dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Sign Up"
+            android:lines="1"
+            android:textColor="#707070"
+            android:textSize="50dp"
+            android:fontFamily="@font/baloo_bhai"
+            android:layout_marginTop="60dp"
+            android:id="@+id/simpleTextSignUp"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="61dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/simpleTextSignUp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Email"
+            android:lines="1"
+            android:fontFamily="@font/baloo_bhai"
+            android:textSize="25sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="46dp"
+            android:id="@+id/editTextSignUpEmail"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="61dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextSignUpEmail"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Username"
+            android:lines="1"
+            android:fontFamily="@font/baloo_bhai"
+            android:textSize="25sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="46dp"
+            android:id="@+id/editTextSignUpUsername"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="61dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextSignUpUsername"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Password"
+            android:lines="1"
+            android:fontFamily="@font/baloo_bhai"
+            android:textSize="25sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="46dp"
+            android:id="@+id/editTextSignUpPassword"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="61dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextSignUpPassword"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Password"
+            android:lines="1"
+            android:fontFamily="@font/baloo_bhai"
+            android:textSize="25sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="46dp"
+            android:id="@+id/editTextSignUpConfirmPassword"/>
+
+        <Button
+            android:id="@+id/buttonSignUp"
+            android:layout_width="0dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="46dp"
+            android:background="@drawable/button_bg"
+            android:backgroundTint="@color/button_bg_color"
+            android:fontFamily="@font/baloo_bhai"
+            android:text="Sign Up"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextSignUpConfirmPassword" />
+
+        <TextView
+            android:id="@+id/tvAlreadySignedUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Already signed up?"
+            android:textSize="30sp"
+            android:fontFamily="@font/baloo_bhai"
+            android:textColor="@color/white"
+            android:layout_marginBottom="25dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
