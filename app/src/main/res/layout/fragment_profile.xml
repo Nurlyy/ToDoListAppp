@@ -3,12 +3,102 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Profile.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@color/bg_color"
+        android:id="@+id/constrainLayoutProfile">
+
+        <androidx.cardview.widget.CardView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="80dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/cardViewProfileFragmentImageContainer"
+            android:layout_width="218dp"
+            android:layout_height="184dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="27dp"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/imageViewProfileFragmentProfileImage"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:fontFamily="@font/baloo_bhai"
+            android:layout_width="0dp"
+            android:layout_height="63dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardViewProfileFragmentImageContainer"
+            android:layout_marginTop="46dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/edit_text_bg"
+            android:lines="@integer/material_motion_duration_long_1"
+            android:paddingStart="20dp"
+            android:hint="Username"
+            android:paddingEnd="20dp"
+            android:id="@+id/editTextProfileFragmentUsername"/>
+
+        <EditText
+            android:enabled="false"
+            android:fontFamily="@font/baloo_bhai"
+            android:layout_width="0dp"
+            android:layout_height="63dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextProfileFragmentUsername"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/edit_text_bg"
+            android:lines="@integer/material_motion_duration_long_1"
+            android:paddingStart="20dp"
+            android:hint="Email"
+            android:paddingEnd="20dp"
+            android:id="@+id/editTextProfileFragmentEmail"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="63dp"
+            app:layout_constraintTop_toBottomOf="@id/editTextProfileFragmentEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="106dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            android:background="@drawable/button_bg"
+            android:text="Save Changes"
+            android:enabled="false"
+            android:fontFamily="@font/baloo_bhai"
+            android:textSize="25dp"
+            android:id="@+id/buttonProfileFragmentSaveChanges"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonProfileFragmentSaveChanges"
+            android:text="Log Out"
+            android:fontFamily="@font/baloo_bhai"
+            android:textSize="25dp"
+            android:id="@+id/textViewProfileFragmentLogOut"
+            android:layout_marginTop="25dp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
