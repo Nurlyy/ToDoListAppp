@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -48,10 +49,20 @@ class SignInFragment(private val act: AppCompatActivity) : Fragment() {
                 Log.d("MyTag", "onCreate: ${e}")
             }
         }
+
+        binding.tvForgotPassword.setOnClickListener{
+            if(binding.editTextSignInEmail.text.isEmpty()){
+                Toast.makeText(act, "Заполните поле email пожалуйста", Toast.LENGTH_SHORT).show()
+            }else{
+                auth.sendPasswordResetEmail(binding.editTextSignInEmail.text.toString())
+            }
+        }
+
         binding.buttonSignIn.setOnClickListener {
             with(binding){
                 signInHelper.signInWithEmail(editTextSignInEmail.text.toString(), editTextSignInPassword.text.toString())
             }
+            //error here
             act.startActivity(Intent(act, MainActivity::class.java))
             act.finish()
         }

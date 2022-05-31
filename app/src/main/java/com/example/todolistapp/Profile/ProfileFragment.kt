@@ -71,6 +71,8 @@ class ProfileFragment(val act: MainActivity) : Fragment() {
             saveChangesClicked(binding.editTextProfileFragmentUsername.text.toString())
         }
 
+
+
         binding.textViewProfileFragmentLogOut.setOnClickListener{
             logOutFromAccount()
         }
@@ -90,7 +92,7 @@ class ProfileFragment(val act: MainActivity) : Fragment() {
                     urlTask.result.let {uri->
                         imageUri = uri
                         binding.imageViewProfileFragmentProfileImage.setImageBitmap(imageBitmap)
-                        act.updateUi(imageBitmap)
+                        act.updateUi(imageBitmap, binding.editTextProfileFragmentUsername.text.toString())
                     }
                 }
             }

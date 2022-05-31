@@ -1,4 +1,4 @@
-package com.example.todolistapp.Tasks.activeTasks
+package com.example.todolistapp.Tasks.favorite
 
 import android.os.Bundle
 import android.util.Log
@@ -8,20 +8,21 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.todolistapp.MainActivity
 import com.example.todolistapp.R
 import com.example.todolistapp.Tasks.Task
+import com.example.todolistapp.Tasks.activeTasks.ActiveTasksRecyclerViewAdapter
 import com.example.todolistapp.Tasks.createTask.CreateTaskFragment
 import com.example.todolistapp.databinding.FragmentActiveTasksBinding
+import com.example.todolistapp.databinding.FragmentFavoriteBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 
-class ActiveTasksFragment(private val act: MainActivity) : Fragment(), ActiveTasksRecyclerViewAdapter.OnItemClickListener {
+class FavoriteFragment(private val act: MainActivity) : Fragment(), FavoriteFragmentRecyclerViewAdapter.OnItemClickListener {
     private lateinit var auth: FirebaseAuth
-    private lateinit var binding: FragmentActiveTasksBinding
+    private lateinit var binding: FragmentFavoriteBinding
     private lateinit var databaseReference: DatabaseReference
     private var activeTasksArrayList = arrayListOf<Task>()
 
@@ -29,8 +30,9 @@ class ActiveTasksFragment(private val act: MainActivity) : Fragment(), ActiveTas
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentActiveTasksBinding.inflate(inflater, container, false)
+        binding = FragmentFavoriteBinding.inflate(inflater, container, false)
         auth = Firebase.auth
+        activeTasksArrayList = arrayListOf()
         databaseReference = FirebaseDatabase.getInstance().getReference("Tasks/${auth.currentUser?.uid}")
         binding.recyclerViewActiveTasksFragment.layoutManager = LinearLayoutManager(act)
         Log.d("MyTag", "onCreateView: ${getActiveTasksFromDatabase().size}")
@@ -53,8 +55,9 @@ class ActiveTasksFragment(private val act: MainActivity) : Fragment(), ActiveTas
 //                        Log.d("MyTag", "onDataChange: ${task.title}")
                         if(task.isDeleted == false && task.isDone == false){
                             if(task.dateTimeInMillis>=currentDateTimeInMillis){
-                                activeTasksArrayList.add(task)
-                                Log.d("MyTag", "onDataChange: ${task.title}")
+                                if(task.isFavorite){
+                                    activeTasksArrayList.add(task)
+                                    Log.d("MyTag", "onDataChange: ${task.title}")}
                             }
                             else{
                                 task.isDone = true
@@ -64,7 +67,7 @@ class ActiveTasksFragment(private val act: MainActivity) : Fragment(), ActiveTas
                             }
                         }
                     }
-                    binding.recyclerViewActiveTasksFragment.adapter = ActiveTasksRecyclerViewAdapter(activeTasksArrayList, this@ActiveTasksFragment)
+                    binding.recyclerViewActiveTasksFragment.adapter = FavoriteFragmentRecyclerViewAdapter(activeTasksArrayList, this@FavoriteFragment)
                 }
             }
 
@@ -83,7 +86,7 @@ class ActiveTasksFragment(private val act: MainActivity) : Fragment(), ActiveTas
 
     override fun onBtnDeleteClick(position: Int) {
         val tempTask = activeTasksArrayList[position]
-        tempTask.isDeleted = true
+        tempTask.isDone = true
         updateTask(tempTask, position)
     }
 

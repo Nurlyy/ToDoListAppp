@@ -12,12 +12,18 @@
         <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/activity_first_screen.xml" value="0.264" />
         <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/activity_sign_in_up.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/deleted_fragment_item.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/favorite_fragment_item.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/fragment_active_tasks.xml" value="0.264" />
         <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/fragment_active_tasks_framgent.xml" value="0.1265625" />
         <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/fragment_create_task.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/fragment_deleted.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/fragment_favorite.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/fragment_profile.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/fragment_sign_in.xml" value="0.264" />
         <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/fragment_sign_up.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/fragment_today.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/fragment_today_fragmeny.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/nav_menu_header.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/layout/toolbar.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Nurlytan/Desktop/AndroidStudio/Projects/ToDoListApp/app/src/main/res/menu/nav_drawer_menu.xml" value="0.27447916666666666" />

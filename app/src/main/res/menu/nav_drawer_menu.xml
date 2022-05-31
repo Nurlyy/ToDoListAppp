@@ -4,22 +4,25 @@
     tools:showIn="navigation_view">
     <item android:title="">
         <menu>
-            <item android:title="Active Tasks"
+            <item android:title="Активные задачи"
                 android:id="@+id/nav_active_tasks"/>
-            <item android:title="Today"
+            <item android:title="Сегодня"
                 android:id="@+id/nav_today"/>
-            <item android:title="Finished"
+            <item android:title="Выполненные"
                 android:id="@+id/nav_finished"/>
-            <item android:title="Deleted"
-                android:id="@+id/nav_deleted"/>
+            <item android:title="Избранные"
+                android:id="@+id/nav_favorite"/>
         </menu>
     </item>
     <item android:title="">
         <menu>
-            <item android:title="My Profile"
+            <item android:title="Мой профиль"
                 android:id="@+id/nav_profile"/>
-            <item android:title="Connect devices"
-                android:id="@+id/nav_connect_devices"/>
+        </menu>
+    </item>
+    <item android:title="">
+        <menu>
+            <item android:title="Автор: "></item>
         </menu>
     </item>
 </menu>

@@ -66,10 +66,14 @@ class CreateTaskHelper(private val act: MainActivity, private val auth: Firebase
             binding.editTextTitleCreateTaskFragment.setText(task.title)
             binding.editTextDescriptionCreateTaskFragment.setText(task.description)
             val listOfDateTime = convertMillisToDateTime(task.dateTimeInMillis)
-            binding.datePicker.init(listOfDateTime[0], listOfDateTime[1], listOfDateTime[2], DatePicker.OnDateChangedListener{datePicker, i, i2, i3 ->})
+            binding.datePicker.init(listOfDateTime[0], listOfDateTime[1]-1, listOfDateTime[2], DatePicker.OnDateChangedListener{datePicker, i, i2, i3 ->})
             binding.timePicker.hour = listOfDateTime[3]
             binding.timePicker.minute = listOfDateTime[4]
-
+            if(task.isFavorite){
+                binding.imageViewFavorite.setImageResource(R.drawable.ic_favorite)
+            }else{
+                binding.imageViewFavorite.setImageResource(R.drawable.ic_favorite_border)
+            }
             binding.checkBoxNotificationCreateTaskFragment.isChecked = task.notification
             if(task.file!=null){
                 selectedFileUri = task.file
@@ -91,7 +95,7 @@ class CreateTaskHelper(private val act: MainActivity, private val auth: Firebase
     //---2---Create-or-update-task
 
     //---2.1---Create-task-object-from-entered-data
-    fun createUpdateTask(task: Task?){
+    fun createUpdateTask(task: Task?, isFavoriteClicked: Boolean){
         if(binding.editTextTitleCreateTaskFragment.text.isNotEmpty()){
             val taskId = if(task==null){databaseReference.push().key}else{task.taskId}
             getDateTime(binding.datePicker, binding.timePicker)
@@ -117,6 +121,7 @@ class CreateTaskHelper(private val act: MainActivity, private val auth: Firebase
                     binding.checkBoxNotificationCreateTaskFragment.isChecked, notificationID,
                     selectedFileUri
                 )
+                tempTask.isFavorite = isFavoriteClicked
                 Log.d("MyTag", "createUpdateTask: PASSED!")
                 uploadTaskToDatabase(tempTask)
             }else{

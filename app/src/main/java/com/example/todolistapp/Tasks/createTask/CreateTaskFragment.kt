@@ -27,6 +27,7 @@ class CreateTaskFragment(private val act: MainActivity, private val task: Task?)
     private lateinit var databaseReference: DatabaseReference
     private lateinit var createTaskHelper: CreateTaskHelper
     private lateinit var storage: FirebaseStorage
+    private var isFavoriteClicked = false
     private var pickFileLauncher = registerForActivityResult(
         ActivityResultContracts.GetContent(), ActivityResultCallback {
             if(it!=null){
@@ -48,12 +49,21 @@ class CreateTaskFragment(private val act: MainActivity, private val task: Task?)
 
         binding.editTextTitleCreateTaskFragment
 
+        binding.imageViewFavorite.setOnClickListener{
+            isFavoriteClicked = !isFavoriteClicked
+            if(isFavoriteClicked){
+                binding.imageViewFavorite.setImageResource(R.drawable.ic_favorite)
+            }else{
+                binding.imageViewFavorite.setImageResource(R.drawable.ic_favorite_border)
+            }
+        }
+
         binding.cardViewPickFileCreateTaskFragment.setOnClickListener{
             if(createTaskHelper.selectedFileUri==null)
                 pickFileLauncher.launch("*/*")
         }
         binding.buttonSaveCreateTaskFragment.setOnClickListener {
-            createTaskHelper.createUpdateTask(if(task!=null){task}else{null})
+            createTaskHelper.createUpdateTask(if(task!=null){task}else{null}, isFavoriteClicked)
         }
         binding.imageViewDeleteFileCreateTaskFragment.setOnClickListener {
             binding.linearLayoutUriCreateTaskFragment.visibility = View.GONE

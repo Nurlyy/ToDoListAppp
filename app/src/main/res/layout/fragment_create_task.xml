@@ -169,6 +169,15 @@
                 />
         </androidx.cardview.widget.CardView>
 
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_favorite_border"
+            app:layout_constraintTop_toTopOf="@id/cardViewNotificationCreateTaskFragment"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="30dp"
+            android:id="@+id/imageViewFavorite"/>
+
         <Button
             android:layout_width="274dp"
             android:layout_height="63dp"

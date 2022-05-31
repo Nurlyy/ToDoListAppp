@@ -10,7 +10,7 @@
     android:layout_marginTop="30dp"
     app:cardBackgroundColor="@color/transparent_white"
     android:layout_height="wrap_content">
-    
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="204dp"
@@ -20,7 +20,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:id="@+id/textViewTitleActiveTaskRecyclerView"
+            android:id="@+id/textViewTitleFavoriteTaskRecyclerView"
             android:textColor="#707070"
             android:text="Task task task task task task"
             android:fontFamily="@font/baloo_bhai"
@@ -32,13 +32,13 @@
             android:layout_marginTop="11dp"
             android:layout_marginStart="14dp"
             android:layout_marginEnd="14dp"/>
-        
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:textColor="#707070"
             android:lines="1"
-            app:layout_constraintTop_toBottomOf="@id/textViewTitleActiveTaskRecyclerView"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitleFavoriteTaskRecyclerView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="14dp"
@@ -48,14 +48,14 @@
             android:fontFamily="@font/baloo_bhai"
             android:layout_marginTop="10dp"
             android:textStyle="normal"
-            android:id="@+id/textViewDescriptionActiveTaskRecyclerView"
+            android:id="@+id/textViewDescriptionFavoriteTaskRecyclerView"
             />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="52dp"
             android:background="@drawable/recycler_view_button_bg"
-            app:layout_constraintTop_toBottomOf="@id/textViewDescriptionActiveTaskRecyclerView"
+            app:layout_constraintTop_toBottomOf="@id/textViewDescriptionFavoriteTaskRecyclerView"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="20dp"
             android:layout_marginStart="14dp"
@@ -63,39 +63,39 @@
             android:textAllCaps="false"
             android:fontFamily="@font/baloo_bhai"
             android:textSize="20sp"
-            android:id="@+id/buttonDoneActiveTaskRecyclerView"
+            android:id="@+id/buttonDoneFavoriteTaskRecyclerView"
             />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="52dp"
             android:background="@drawable/recycler_view_button_bg"
-            app:layout_constraintTop_toBottomOf="@id/textViewDescriptionActiveTaskRecyclerView"
-            app:layout_constraintStart_toEndOf="@id/buttonDoneActiveTaskRecyclerView"
+            app:layout_constraintTop_toBottomOf="@id/textViewDescriptionFavoriteTaskRecyclerView"
+            app:layout_constraintStart_toEndOf="@id/buttonDoneFavoriteTaskRecyclerView"
             android:layout_marginTop="20dp"
             android:layout_marginStart="14dp"
             android:text="Delete"
             android:textAllCaps="false"
             android:fontFamily="@font/baloo_bhai"
             android:textSize="20sp"
-            android:id="@+id/buttonDeleteActiveTaskRecyclerView"
+            android:id="@+id/buttonDeleteFavoriteTaskRecyclerView"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="@id/buttonDeleteActiveTaskRecyclerView"
-            app:layout_constraintBottom_toBottomOf="@id/buttonDeleteActiveTaskRecyclerView"
+            app:layout_constraintTop_toTopOf="@id/buttonDeleteFavoriteTaskRecyclerView"
+            app:layout_constraintBottom_toBottomOf="@id/buttonDeleteFavoriteTaskRecyclerView"
             android:text="22/12/2022"
             android:textColor="#707070"
-            app:layout_constraintStart_toEndOf="@id/buttonDeleteActiveTaskRecyclerView"
+            app:layout_constraintStart_toEndOf="@id/buttonDeleteFavoriteTaskRecyclerView"
             android:layout_marginStart="5dp"
             android:fontFamily="@font/baloo_bhai"
             android:textSize="20dp"
             android:layout_marginTop="10dp"
-            android:id="@+id/textViewDateActiveTasksRecyclerView"/>
+            android:id="@+id/textViewDateFavoriteTasksRecyclerView"/>
 
-        
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
